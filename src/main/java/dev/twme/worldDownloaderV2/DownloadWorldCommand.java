@@ -56,13 +56,13 @@ public class DownloadWorldCommand implements CommandExecutor {
             public void onComplete(File zipped) {
                 Bukkit.getScheduler().runTask(plugin, () -> player.sendMessage(configManager.getMessage("compressionComplete")));
 
-                // 上傳至 S3
+                // upload zipped file to S3
                 s3Manager.uploadFile(zipped, zipped.getName()).thenAccept(url -> {
                     if (url != null) {
                         Bukkit.getScheduler().runTask(plugin, () -> {
                             String downloadMsg = configManager.getMessage("downloadLink").replace("%s", url);
                             player.sendMessage(downloadMsg);
-                            // 刪除本地壓縮文件
+                            // delete zipped file
                             zipped.delete();
                         });
                     } else {

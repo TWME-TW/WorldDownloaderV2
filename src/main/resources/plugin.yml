@@ -8,10 +8,10 @@ libraries:
   - net.lingala.zip4j:zip4j:2.11.5
 commands:
   downloadworld:
-    description: 下載當前世界
+    description: download the world
     usage: /downloadworld
     permission: worlddownloader.use
 permissions:
   worlddownloader.use:
-    description: 允許使用下載世界的指令
+    description: allow the player to download the world
     default: true

@@ -59,6 +59,8 @@ public class DownloadWorldCommand implements CommandExecutor {
                 // upload zipped file to S3
                 s3Manager.uploadFile(zipped, zipped.getName()).thenAccept(url -> {
                     if (url != null) {
+
+                        // send download link to player
                         Bukkit.getScheduler().runTask(plugin, () -> {
                             String downloadMsg = configManager.getMessage("downloadLink").replace("%s", url);
                             player.sendMessage(downloadMsg);

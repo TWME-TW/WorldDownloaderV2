@@ -1,0 +1,17 @@
+s3:
+  endpoint: "https://play.min.io"
+  accessKey: "your-access-key"
+  secretKey: "your-secret-key"
+  bucket: "your-bucket-name"
+
+linkExpiry: 3600 # 1 hour
+
+messages:
+  startCompression: "Starting world compression..."
+  compressionProgress: "Compression progress: %s%%"
+  compressionComplete: "Compression complete, starting upload."
+  uploadProgress: "Upload progress: %s%%"
+  downloadLink: "World download link: %s"
+  error: "An error occurred: %s"
+  uploadFailed: "Upload failed"
+  senderNotPlayer: "Only players can use this command"

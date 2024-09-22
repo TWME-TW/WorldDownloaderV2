@@ -1,0 +1,17 @@
+name: WorldDownloaderV2
+version: '0.0.1'
+main: dev.twme.worldDownloaderV2.WorldDownloaderV2
+api-version: '1.21'
+authors: [ TWME ]
+libraries:
+  - io.minio:minio:8.5.12
+  - net.lingala.zip4j:zip4j:2.11.5
+commands:
+  downloadworld:
+    description: 下載當前世界
+    usage: /downloadworld
+    permission: worlddownloader.use
+permissions:
+  worlddownloader.use:
+    description: 允許使用下載世界的指令
+    default: true

@@ -33,7 +33,7 @@ public class ConfigManager {
     }
 
     public int getLinkExpiry() {
-        return config.getInt("linkExpiry"); // 單位：秒
+        return config.getInt("linkExpiry"); // in seconds
     }
 
     public String getMessage(String key) {
